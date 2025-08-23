@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* GLOBAL BACKGROUND COLOR - Change this value to update entire site background */
+/* To modify the site background: Update the --bg-primary and --bg-secondary values below */
+/* Current gradient: Deep red (#7A0C10) to dark black (#1A0A0A) */
+:root {
+  --bg-primary: #7A0C10;
+  --bg-secondary: #1A0A0A;
+}
+
+/* Global background class - Applied to main containers */
+.site-background {
+  background: radial-gradient(ellipse at center, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+/* Custom scrollbar for better aesthetics */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(26, 10, 10, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #f97316, #dc2626);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #ea580c, #b91c1c);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Improved sticky positioning */
+.sticky-container {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 6rem;
+  height: fit-content;
+}
+
+/* Enhanced image transitions */
+.image-transition {
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Optimized scroll performance */
+.scroll-optimized {
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Enhanced text rendering */
+body {
+  font-feature-settings: 'liga', 'kern';
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom utility classes */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.rotateY-15 {
+  transform: rotateY(-15deg);
+}
+
+.rotateY-0 {
+  transform: rotateY(0deg);
+}
+
+/* Button press effect */
+.btn-press {
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-press:active {
+  transform: perspective(1000px) rotateX(5deg) translateY(2px);
+}
+
+/* Backdrop blur fallback */
+@supports not (backdrop-filter: blur(10px)) {
+  .backdrop-blur-sm {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+/* Custom gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #f97316, #eab308);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Mobile Sticky Order Button Styles */
+/* Mobile Sticky Order Button - Mobile only display */
+.mobile-sticky-order {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 8px 12px;
+  background: linear-gradient(135deg, #f97316, #dc2626);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Hide mobile sticky button on desktop */
+@media (min-width: 768px) {
+  .mobile-sticky-order {
+    display: none;
+  }
+}
+
+/* Hide section order buttons on mobile (except CTA section) */
+@media (max-width: 767px) {
+  .section-order-button:not(.cta-section-button) {
+    display: none;
+  }
+}
+
+/* YouTube video responsive container */
+.youtube-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.youtube-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+}
+
+/* Enhanced YouTube responsiveness */
+@media (max-width: 640px) {
+  .youtube-container {
+    padding-bottom: 56.25%;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .youtube-container {
+    padding-bottom: 56.25%;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1025px) {
+  .youtube-container {
+    padding-bottom: 56.25%;
+    max-width: 100%;
+  }
+}
+
+/* Ensure video controls are accessible on all devices */
+.youtube-container iframe {
+  pointer-events: auto;
+  touch-action: manipulation;
+}

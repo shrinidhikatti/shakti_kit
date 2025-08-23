@@ -1,0 +1,52 @@
+.video-container iframe {
+  width: 100%;
+  max-width: 900px;               /* Default max width */
+  aspect-ratio: 16 / 9;           /* Maintains landscape ratio */
+  border-radius: 16px;            /* Rounded corners */
+  overflow: hidden;               /* Clips video inside container */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4); /* Shadow */
+  margin: 0 auto;                 /* Center horizontally */
+}
+
+/* Extra Large screens (>1600px) */
+@media (min-width: 1600px) {
+  .video-container iframe {
+    max-width: 720px;  /* 20% smaller than 900px */
+  }
+}
+
+/* Large screens (1200px - 1599px) */
+@media (min-width: 1200px) and (max-width: 1599px) {
+  .video-container iframe {
+    max-width: 720px;  /* 20% smaller than 900px */
+  }
+}
+
+/* Medium screens (laptops/tablets) */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .video-container iframe {
+    max-width: 700px;
+  }
+}
+
+/* Small tablets & large phones */
+@media (max-width: 767px) and (min-width: 480px) {
+  .video-container iframe {
+    max-width: 500px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 479px) {
+  .video-container iframe {
+    max-width: 100%;
+    aspect-ratio: 16 / 9; /* Keep same aspect ratio */
+  }
+}
+
+/* Ensure ReactPlayer iframe/video fills container */
+.video-container iframe,
+.video-container video {
+  width: 100%;
+  height: 100%;
+}
