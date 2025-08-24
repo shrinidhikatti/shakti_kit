@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { ShoppingCart } from 'lucide-react';
 import { AnimatedSection } from './AnimatedSection';
 import "./ProblemSection.css"
 
-// Array of journey days - defines the 9-day spiritual journey
 const journeyDays = [
   { day: 1, title: 'Shodhana (Purification)', focus: 'Cleansing of aura and release of tamas' },
   { day: 2, title: 'Stambhana (Centering the Mind)', focus: 'Breath anchoring and mental stillness' },
@@ -17,17 +16,38 @@ const journeyDays = [
 ];
 
 export const SolutionSection: React.FC = () => {
-  const handleOrderClick = () => {
-  console.log('Order button clicked from mobile sticky button');
+  const iframeRef = useRef<HTMLIFrameElement | null>(null);
 
-  // Open Razorpay link in a new tab
-  window.open('https://rzp.io/rzp/CglMnpjr', '_blank', 'noopener,noreferrer');
-};
+  useEffect(() => {
+    const iframe = iframeRef.current;
+    if (!iframe) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // When video section is visible → try to unmute
+            iframe.contentWindow?.postMessage(
+              '{"event":"command","func":"unMute","args":""}',
+              '*'
+            );
+          }
+        });
+      },
+      { threshold: 0.5 } // 50% visible
+    );
+
+    observer.observe(iframe);
+    return () => observer.disconnect();
+  }, []);
+
+  const handleOrderClick = () => {
+    window.open('https://rzp.io/rzp/CglMnpjr', '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <AnimatedSection id="solution" className="py-12 sm:py-20 relative z-10">
       <div className="container mx-auto px-4 sm:px-6">
-        {/* Heading */}
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-6 sm:mb-8">
             The Solution: A{' '}
@@ -35,14 +55,17 @@ export const SolutionSection: React.FC = () => {
               9-Day Guided Spiritual Journey
             </span>
           </h2>
-           <div className="video-container mb-12">
+
+          <div className="video-container mb-12">
             <iframe
-                src="https://www.youtube.com/embed/0hHg09VEFsE?autoplay=1&mute=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&showinfo=0"
-                title="YouTube video"
-                allow="autoplay; encrypted-media"
-                allowFullScreen
-              ></iframe>
+              src="https://www.youtube.com/embed/0hHg09VEFsE?autoplay=0&mute=0&controls=1&rel=0&modestbranding=1&iv_load_policy=3&showinfo=0"
+              title="YouTube video"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+            ></iframe>
           </div>
+
+
           <p className="text-base sm:text-lg md:text-2xl text-gray-300 max-w-3xl sm:max-w-4xl mx-auto mb-4">
             We created the Shakti Kit for those who seek transformation through the ancient power 
             of Vedic rituals and spiritual alignment.
@@ -53,9 +76,11 @@ export const SolutionSection: React.FC = () => {
           </p>
         </div>
 
-        {/* Order Button */}
         <div className="text-center mb-12">
-          <button onClick={handleOrderClick} className="section-order-button group bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 hover:scale-105 active:scale-95 shadow-xl hover:shadow-2xl relative overflow-hidden">
+          <button
+            onClick={handleOrderClick}
+            className="section-order-button group bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-full text-lg font-bold transition-all duration-300 hover:scale-105 active:scale-95 shadow-xl hover:shadow-2xl relative overflow-hidden"
+          >
             <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <span className="relative z-10 flex items-center">
               <ShoppingCart className="w-5 h-5 mr-2" />
@@ -64,21 +89,19 @@ export const SolutionSection: React.FC = () => {
           </button>
         </div>
 
-        {/* Journey Cards */}
         <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 max-w-6xl mx-auto">
           {journeyDays.map((day, index) => (
             <div
               key={day.day}
               className="group bg-white/5 backdrop-blur-sm rounded-xl p-4 sm:p-5 flex flex-col items-center w-full sm:w-[280px] max-w-[90%] transition-all duration-500 hover:bg-white/10 hover:scale-105 cursor-pointer"
-              style={{
-                transformOrigin: 'center',
-                animationDelay: `${index * 100}ms`,
-              }}
+              style={{ transformOrigin: 'center', animationDelay: `${index * 100}ms` }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'perspective(1000px) rotateY(10deg) scale(1.05)';
+                e.currentTarget.style.transform =
+                  'perspective(1000px) rotateY(10deg) scale(1.05)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'perspective(1000px) rotateY(0deg) scale(1)';
+                e.currentTarget.style.transform =
+                  'perspective(1000px) rotateY(0deg) scale(1)';
               }}
             >
               <div className="text-center">

@@ -20,7 +20,7 @@ const kitItems = [
     name: 'Trinetra Deepa',
     description: 'Light this lamp, and light up your destiny.',
     icon: Star, // ✨
-    image: 'https://images.pexels.com/photos/6646918/pexels-photo-6646918.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/Trinetri%20Deepa.jpg',
     spiritualBenefit: 'Enhances intuition and spiritual sight',
     usage: 'Light during morning meditation for 9 minutes daily',
   },
@@ -28,7 +28,7 @@ const kitItems = [
     name: 'Durga Yantra',
     description: 'A handwritten yantra… your shield of divine power.',
     icon: Circle, // 🕉
-    image: 'https://images.pexels.com/photos/8978562/pexels-photo-8978562.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/Durga%20Yantra%20.png',
     spiritualBenefit: 'Provides divine protection and removes obstacles',
     usage: 'Place at the center of your altar as the focal point',
   },
@@ -36,7 +36,7 @@ const kitItems = [
     name: 'Navagraha Oil',
     description: 'One drop, nine planets, endless harmony.',
     icon: Droplets, // 🌌
-    image: 'https://images.pexels.com/photos/4041392/pexels-photo-4041392.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/Navagraha%20Oil%20.png',
     spiritualBenefit: 'Balances planetary doshas and enhances luck',
     usage: 'Apply a small amount to your forehead and palms before ritual',
   },
@@ -44,7 +44,7 @@ const kitItems = [
     name: 'Vaijayanti Mala',
     description: 'Chant your way to victory & divine grace.',
     icon: Beads, // 📿
-    image: 'https://images.pexels.com/photos/8978740/pexels-photo-8978740.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/Vaijayanti%20mala%20.jpg',
     spiritualBenefit: 'Amplifies mantra power and maintains spiritual focus',
     usage: 'Use for daily Durga mantra chanting (108 repetitions)',
   },
@@ -52,7 +52,7 @@ const kitItems = [
     name: 'Hakik Bracelet (7 Chakra)',
     description: 'Balance your chakras, balance your life.',
     icon: Shield, // 🌈
-    image: 'https://images.pexels.com/photos/8978563/pexels-photo-8978563.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/Hakik%20Bracelet%20.png',
     spiritualBenefit: 'Provides emotional stability and mental clarity',
     usage: 'Wear on left wrist throughout the 9-day journey',
   },
@@ -60,7 +60,7 @@ const kitItems = [
     name: 'Gomati Chakra',
     description: 'The cosmic coin of prosperity & protection.',
     icon: Circle, // 💫
-    image: 'https://images.pexels.com/photos/8978565/pexels-photo-8978565.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/Shakti%20Kit%20(1).jpg',
     spiritualBenefit: 'Provides psychic protection and spiritual grounding',
     usage: 'Hold in palm during meditation or place near your altar',
   },
@@ -68,7 +68,7 @@ const kitItems = [
     name: 'Sankalpa Thread',
     description: 'Tie your dreams, unlock your destiny.',
     icon: Thread, // 🔴
-    image: 'https://images.pexels.com/photos/6646943/pexels-photo-6646943.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/Shakti%20Kit%20(1).jpg',
     spiritualBenefit: 'Manifests desires and strengthens willpower',
     usage: 'Tie around right wrist while stating your intention clearly',
   },
@@ -76,7 +76,7 @@ const kitItems = [
     name: 'Red Velvet Cloth',
     description: 'A sacred throne for your divine rituals.',
     icon: Package, // 🪔
-    image: 'https://images.pexels.com/photos/6646917/pexels-photo-6646917.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/Shakti%20Kit%20(1).jpg',
     spiritualBenefit: 'Creates sacred boundary and amplifies ritual energy',
     usage: 'Spread as base cloth for your altar setup',
   },
@@ -84,7 +84,7 @@ const kitItems = [
     name: 'Chandan Tilak',
     description: 'One touch to calm your mind & uplift your aura.',
     icon: Dot, // 🌿
-    image: 'https://images.pexels.com/photos/8978564/pexels-photo-8978564.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/Chandana%20Tilaka.png',
     spiritualBenefit: 'Calms mind and enhances spiritual concentration',
     usage: 'Apply on forehead, throat, and heart chakra points daily',
   },
@@ -92,7 +92,7 @@ const kitItems = [
     name: 'Dhoopa',
     description: 'Fragrance that cleanses negativity & awakens energy.',
     icon: Wind, // 🔥
-    image: 'https://images.pexels.com/photos/6646944/pexels-photo-6646944.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/Shakti%20Kit%20(1).jpg',
     spiritualBenefit: 'Purifies environment and elevates consciousness',
     usage: "Light one stick before beginning each day's ritual",
   },
@@ -100,7 +100,7 @@ const kitItems = [
     name: 'Shakti Kriya Meditation',
     description: '9 minutes. Infinite transformation.',
     icon: Sparkles, // 🧘
-    image: 'https://images.pexels.com/photos/3823018/pexels-photo-3823018.jpeg?auto=compress&cs=tinysrgb&w=400',
+    image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/Shakti%20Kit%20(1).jpg',
     spiritualBenefit: 'Awakens inner energy and promotes spiritual growth',
     usage: 'Practice daily for 9 minutes during the journey',
   },
@@ -116,7 +116,6 @@ export const ScrollytellingSection: React.FC = () => {
   // Refs for right-side cards
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
   itemRefs.current = [];
-
   const setItemRef = (el: HTMLDivElement | null, idx: number) => {
     itemRefs.current[idx] = el;
   };
@@ -127,24 +126,19 @@ export const ScrollytellingSection: React.FC = () => {
   useEffect(() => {
     const scrollContainer = scrollRef.current;
     if (!scrollContainer) return;
-
     const cards = itemRefs.current.filter(Boolean) as HTMLDivElement[];
     if (!cards.length) return;
 
     let rafId: number | null = null;
-
     const observer = new IntersectionObserver(
       (entries) => {
         if (!entries.length) return;
-
         // Choose the entry with the highest visible ratio
         const topEntry = entries.reduce<IntersectionObserverEntry | null>((max, e) => {
           if (!max) return e;
           return e.intersectionRatio > max.intersectionRatio ? e : max;
         }, null);
-
         if (!topEntry) return;
-
         const idxAttr = (topEntry.target as HTMLElement).dataset.index;
         const idx = idxAttr ? parseInt(idxAttr, 10) : 0;
 
@@ -184,7 +178,6 @@ export const ScrollytellingSection: React.FC = () => {
       const viewportCenter = containerRect.top + containerRect.height / 2;
       let bestIdx = 0;
       let bestDist = Number.POSITIVE_INFINITY;
-
       cards.forEach((el, i) => {
         const rect = el.getBoundingClientRect();
         const cardCenter = rect.top + rect.height / 2;
@@ -194,7 +187,6 @@ export const ScrollytellingSection: React.FC = () => {
           bestIdx = i;
         }
       });
-
       setActiveIndex((prev) => {
         if (prev !== bestIdx) {
           // Start fade transition
@@ -224,14 +216,13 @@ export const ScrollytellingSection: React.FC = () => {
   const currentItem = kitItems[activeIndex];
 
   // Circle size configuration - adjust this value to change the left circle size
-  const circleSize = 'w-40 h-40 sm:w-56 sm:h-56 lg:w-[18rem] lg:h-[18rem]';
-const handleOrderClick = () => {
-  console.log('Order button clicked from mobile sticky button');
+  const circleSize = 'w-44 h-44 sm:w-60 sm:h-60 lg:w-[20rem] lg:h-[20rem]';
 
-  // Open Razorpay link in a new tab
-  window.open('https://rzp.io/rzp/CglMnpjr', '_blank', 'noopener,noreferrer');
-};
-
+  const handleOrderClick = () => {
+    console.log('Order button clicked from mobile sticky button');
+    // Open Razorpay link in a new tab
+    window.open('https://rzp.io/rzp/CglMnpjr', '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <section id="kit-contents" className="relative z-10 py-8 sm:py-12">
@@ -240,7 +231,6 @@ const handleOrderClick = () => {
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-300 mb-8 sm:mb-12">
           What&apos;s Inside the Shakti Kit
         </h2>
-
         <div className="flex flex-col lg:flex-row items-center justify-center max-w-7xl mx-auto gap-6 sm:gap-8">
           {/* Left: Preview card with image and text below */}
           <div className="w-full max-w-[90%] sm:max-w-[80%] lg:w-1/2 flex flex-col items-center">
@@ -256,13 +246,12 @@ const handleOrderClick = () => {
                 />
                 {/* Bright golden color animation in the background */}
                 <div className="absolute inset-0 rounded-full bg-gradient-to-r from-yellow-400/20 to-orange-300/20 blur-xl animate-pulse" />
-
                 {/* Image container for cross-fade transition */}
-                <div className="absolute inset-0">
+                <div className="absolute inset-0 p-2">
                   <img
                     src={currentImage}
                     alt={currentItem.name}
-                    className={`w-full h-full object-cover rounded-full transition-opacity duration-500 ease-in-out ${
+                    className={`w-full h-full object-contain rounded-full transition-opacity duration-500 ease-in-out ${
                       isFading ? 'opacity-0' : 'opacity-100'
                     }`}
                     loading="lazy"
@@ -270,7 +259,7 @@ const handleOrderClick = () => {
                   <img
                     src={nextImage}
                     alt={currentItem.name}
-                    className={`w-full h-full object-cover rounded-full absolute top-0 left-0 transition-opacity duration-500 ease-in-out ${
+                    className={`w-full h-full object-contain rounded-full absolute top-0 left-0 transition-opacity duration-500 ease-in-out ${
                       isFading ? 'opacity-100' : 'opacity-0'
                     }`}
                     loading="lazy"
@@ -288,7 +277,6 @@ const handleOrderClick = () => {
               </div>
             </div>
           </div>
-
           {/* Right: Scrollable content cards - height matches left side, one card visible */}
           <div
             ref={scrollRef}
@@ -298,7 +286,6 @@ const handleOrderClick = () => {
               {kitItems.map((item, index) => {
                 const Icon = item.icon;
                 const isActive = index === activeIndex; // Exact active card drives the left preview
-
                 return (
                   <div
                     key={index}
@@ -342,10 +329,12 @@ const handleOrderClick = () => {
           </div>
           {/* End Right */}
         </div>
-
         {/* Section Order Button */}
         <div className="text-center mt-6 sm:mt-8">
-          <button onClick={handleOrderClick} className="section-order-button group bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-bold transition-all duration-300 hover:scale-105 active:scale-95 shadow-xl hover:shadow-2xl relative overflow-hidden">
+          <button
+            onClick={handleOrderClick}
+            className="section-order-button group bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-bold transition-all duration-300 hover:scale-105 active:scale-95 shadow-xl hover:shadow-2xl relative overflow-hidden"
+          >
             <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <span className="relative z-10 flex items-center">
               <ShoppingCart className="w-4 h-4 sm:w-5 sm:h-5 mr-2" />
