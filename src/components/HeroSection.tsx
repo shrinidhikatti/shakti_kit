@@ -2,7 +2,7 @@ import React from 'react';
 import { Sparkles, Star } from 'lucide-react';
 
 // Image URL for the hero section
-const heroImage = 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/10c6326f-a7ef-4648-951e-7cdb7dc72924.png';
+const heroImage = 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/Shakti%20kit.png';
 
 export const HeroSection: React.FC = () => {
   return (

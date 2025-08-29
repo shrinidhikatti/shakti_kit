@@ -6,7 +6,8 @@
 /* To modify the site background: Update the --bg-primary and --bg-secondary values below */
 /* Current gradient: Deep red (#7A0C10) to dark black (#1A0A0A) */
 :root {
-  --bg-primary: #7A0C10;
+  --bg-primary: #7A0C10; 
+  /* --bg-primary: #183d56;  */
   --bg-secondary: #1A0A0A;
 }
 
