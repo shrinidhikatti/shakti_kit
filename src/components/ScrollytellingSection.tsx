@@ -20,7 +20,7 @@ const kitItems = [
     name: 'Trinetra Deepa',
     description: 'Light this lamp, and light up your destiny.',
     icon: Star, // ✨
-    image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/Trinetri%20Deepa.jpg',
+    image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/Trinetri%20Deepa%20(1).jpg',
     spiritualBenefit: 'Enhances intuition and spiritual sight',
     usage: 'Light during morning meditation for 9 minutes daily',
   },
@@ -28,7 +28,7 @@ const kitItems = [
     name: 'Durga Yantra',
     description: 'A handwritten yantra… your shield of divine power.',
     icon: Circle, // 🕉
-    image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/Durga%20Yantra%20.png',
+    image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/Durga%20Yantra.jpg',
     spiritualBenefit: 'Provides divine protection and removes obstacles',
     usage: 'Place at the center of your altar as the focal point',
   },
@@ -44,7 +44,7 @@ const kitItems = [
     name: 'Vaijayanti Mala',
     description: 'Chant your way to victory & divine grace.',
     icon: Beads, // 📿
-    image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/Vaijayanti%20mala%20.jpg',
+    image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/Vaijayanti%20Mala.jpg',
     spiritualBenefit: 'Amplifies mantra power and maintains spiritual focus',
     usage: 'Use for daily Durga mantra chanting (108 repetitions)',
   },
@@ -52,7 +52,7 @@ const kitItems = [
     name: 'Hakik Bracelet (7 Chakra)',
     description: 'Balance your chakras, balance your life.',
     icon: Shield, // 🌈
-    image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/Hakik%20Bracelet%20.png',
+    image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/Hakik%20Bracelet.jpg',
     spiritualBenefit: 'Provides emotional stability and mental clarity',
     usage: 'Wear on left wrist throughout the 9-day journey',
   },
@@ -60,7 +60,7 @@ const kitItems = [
     name: 'Gomati Chakra',
     description: 'The cosmic coin of prosperity & protection.',
     icon: Circle, // 💫
-    image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/Shakti%20Kit%20(1).jpg',
+    image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/Gomati%20Chakra.jpg',
     spiritualBenefit: 'Provides psychic protection and spiritual grounding',
     usage: 'Hold in palm during meditation or place near your altar',
   },
@@ -68,7 +68,7 @@ const kitItems = [
     name: 'Sankalpa Thread',
     description: 'Tie your dreams, unlock your destiny.',
     icon: Thread, // 🔴
-    image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/Shakti%20Kit%20(1).jpg',
+    image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/Sacred%20thread.png',
     spiritualBenefit: 'Manifests desires and strengthens willpower',
     usage: 'Tie around right wrist while stating your intention clearly',
   },
@@ -76,7 +76,7 @@ const kitItems = [
     name: 'Red Velvet Cloth',
     description: 'A sacred throne for your divine rituals.',
     icon: Package, // 🪔
-    image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/Shakti%20Kit%20(1).jpg',
+    image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/Red%20Velvet%20Cloth.jpg',
     spiritualBenefit: 'Creates sacred boundary and amplifies ritual energy',
     usage: 'Spread as base cloth for your altar setup',
   },
@@ -92,7 +92,7 @@ const kitItems = [
     name: 'Dhoopa',
     description: 'Fragrance that cleanses negativity & awakens energy.',
     icon: Wind, // 🔥
-    image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/Shakti%20Kit%20(1).jpg',
+    image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/Dhoopa.png',
     spiritualBenefit: 'Purifies environment and elevates consciousness',
     usage: "Light one stick before beginning each day's ritual",
   },
