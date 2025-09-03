@@ -8,7 +8,7 @@ export const GuideSection: React.FC = () => {
   console.log('Order button clicked from mobile sticky button');
 
   // Open Razorpay link in a new tab
-  window.open('https://rzp.io/rzp/CglMnpjr', '_blank', 'noopener,noreferrer');
+  window.open('https://pages.razorpay.com/stores/Udayantra', '_blank', 'noopener,noreferrer');
 };
 
   return (
@@ -20,9 +20,9 @@ export const GuideSection: React.FC = () => {
               <BookOpen className="w-16 h-16 text-white" />
             </div>
             <h3 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-300 mb-4">
-              Your Spiritual Guide
+              Your Spiritual Guide Shri V. M. Joshi
             </h3>
-            <h4 className="text-2xl font-bold text-white mb-4">Shri V. M. Joshi</h4>
+            <h4 className="text-2xl font-bold text-white mb-4">Founder, Shri V. M. Joshi Vastu & Astrologer</h4>
             
             <div className="flex items-center justify-center space-x-2 mb-6">
               {[...Array(5)].map((_, i) => (
@@ -34,7 +34,7 @@ export const GuideSection: React.FC = () => {
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             <div className="text-center p-4 bg-white/5 rounded-lg">
               <Award className="w-8 h-8 text-orange-400 mx-auto mb-2" />
-              <p className="text-white font-semibold">40+ Years Experience</p>
+              <p className="text-white font-semibold">25+ Years Experience</p>
               <p className="text-gray-300 text-sm">Vedic Rituals Expert</p>
             </div>
             <div className="text-center p-4 bg-white/5 rounded-lg">
@@ -50,9 +50,10 @@ export const GuideSection: React.FC = () => {
           </div>
           
           <p className="text-lg text-gray-300 text-center leading-relaxed">
-            "Every soul deserves to experience their true spiritual power. The Shakti Kit is my life's 
+            {/* "Every soul deserves to experience their true spiritual power. The Shakti Kit is my life's 
             work condensed into a simple, accessible format that anyone can use to transform their reality 
-            through the divine feminine energy of Maa Durga."
+            through the divine feminine energy of Maa Durga." */}
+            For over 25 years, I have guided people through astrology and vastu, helping them overcome challenges and live in harmony with nature’s energies. The Shakti Kit is my heartfelt creation — a bridge between ancient Vedic wisdom and modern life. It is designed to remove negativity, awaken your inner power, and bring peace, balance, and prosperity into your home. May this 9-day journey of Shakti transform your life as it has transformed mine.
           </p>
 
           {/* Section Order Button - Duplicate this structure for new sections */}

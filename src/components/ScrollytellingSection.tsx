@@ -36,7 +36,7 @@ const kitItems = [
     name: 'Navagraha Oil',
     description: 'One drop, nine planets, endless harmony.',
     icon: Droplets, // 🌌
-    image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/Navagraha%20Oil%20.png',
+    image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/Navagraha%20Oil.jpg',
     spiritualBenefit: 'Balances planetary doshas and enhances luck',
     usage: 'Apply a small amount to your forehead and palms before ritual',
   },
@@ -84,7 +84,7 @@ const kitItems = [
     name: 'Chandan Tilak',
     description: 'One touch to calm your mind & uplift your aura.',
     icon: Dot, // 🌿
-    image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/Chandana%20Tilaka.png',
+    image: 'https://raw.githubusercontent.com/uday-kiran-palepu/Website-Images/refs/heads/main/Shakti-kit%20-Compressed/Chandana.jpg',
     spiritualBenefit: 'Calms mind and enhances spiritual concentration',
     usage: 'Apply on forehead, throat, and heart chakra points daily',
   },
@@ -221,7 +221,7 @@ export const ScrollytellingSection: React.FC = () => {
   const handleOrderClick = () => {
     console.log('Order button clicked from mobile sticky button');
     // Open Razorpay link in a new tab
-    window.open('https://rzp.io/rzp/CglMnpjr', '_blank', 'noopener,noreferrer');
+    window.open('https://pages.razorpay.com/stores/Udayantra', '_blank', 'noopener,noreferrer');
   };
 
   return (
