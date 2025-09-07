@@ -1,16 +1,16 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
-// Navigation items - update this to change the sections and labels
+// Navigation items - update this to change the sections and labels (ensure id matches section IDs in the DOM)
 const navItems = [
   { id: 'hero', label: 'Home' },
   { id: 'problem', label: 'The Problem' },
+  { id: 'kit-contents', label: 'Sacred Tools' },
   { id: 'solution', label: '9-Day Journey' },
   { id: 'benefits', label: 'Benefits' },
-  { id: 'kit-contents', label: 'Sacred Tools' },
   { id: 'ritual', label: 'The Ritual' },
   { id: 'guide', label: 'Your Guide' },
+  { id: 'reviews', label: 'Reviews' }, // Updated to point to reviews section
   { id: 'cta', label: 'Order Now' },
 ];
 
