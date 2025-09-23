@@ -42,7 +42,7 @@ export const SolutionSection: React.FC = () => {
   }, []);
 
   const handleOrderClick = () => {
-    window.open('https://pages.razorpay.com/stores/Udayantra', '_blank', 'noopener,noreferrer');
+    window.open('https://pages.razorpay.com/stores/shakti-kit', '_blank', 'noopener,noreferrer');
   };
 
   return (
