@@ -135,7 +135,7 @@ export const CTASection: React.FC = () => {
           <div className="video-container mb-12">
             <iframe
               ref={iframeRef}
-              src="https://www.youtube.com/embed/hyQGKr2SOj0?autoplay=0&mute=0&controls=1&rel=0&modestbranding=1&iv_load_policy=3&showinfo=0"
+              src="https://www.youtube.com/embed/cPDb9zJGI5E?autoplay=0&mute=0&controls=1&rel=0&modestbranding=1&iv_load_policy=3&showinfo=0"
               title="YouTube video"
               allow="autoplay; encrypted-media"
               allowFullScreen
