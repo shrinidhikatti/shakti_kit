@@ -84,32 +84,32 @@ export const CTASection: React.FC = () => {
   const handleOrderClick = () => {
     console.log('Order button clicked from CTA section');
     // Open Razorpay link in a new tab
-    window.open('https://pages.razorpay.com/stores/shakti-kit', '_blank', 'noopener,noreferrer');
+    window.open('https://rzp.io/rzp/shaktikit', '_blank', 'noopener,noreferrer');
   };
 
   // Unmute video when section is visible
-  useEffect(() => {
-    const iframe = iframeRef.current;
-    if (!iframe) return;
+  // useEffect(() => {
+  //   const iframe = iframeRef.current;
+  //   if (!iframe) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            // When video section is visible → try to unmute
-            iframe.contentWindow?.postMessage(
-              '{"event":"command","func":"unMute","args":""}',
-              '*'
-            );
-          }
-        });
-      },
-      { threshold: 0.5 } // 50% visible
-    );
+  //   const observer = new IntersectionObserver(
+  //     (entries) => {
+  //       entries.forEach((entry) => {
+  //         if (entry.isIntersecting) {
+  //           // When video section is visible → try to unmute
+  //           iframe.contentWindow?.postMessage(
+  //             '{"event":"command","func":"unMute","args":""}',
+  //             '*'
+  //           );
+  //         }
+  //       });
+  //     },
+  //     { threshold: 0.5 } // 50% visible
+  //   );
 
-    observer.observe(iframe);
-    return () => observer.disconnect();
-  }, []);
+  //   observer.observe(iframe);
+  //   return () => observer.disconnect();
+  // }, []);
 
   return (
     <AnimatedSection id="cta" className="py-20 relative z-10">
@@ -132,7 +132,7 @@ export const CTASection: React.FC = () => {
           </p>
           
           {/* Video section */}
-          <div className="video-container mb-12">
+          {/* <div className="video-container mb-12">
             <iframe
               ref={iframeRef}
               src="https://www.youtube.com/embed/cPDb9zJGI5E?autoplay=0&mute=0&controls=1&rel=0&modestbranding=1&iv_load_policy=3&showinfo=0"
@@ -140,7 +140,7 @@ export const CTASection: React.FC = () => {
               allow="autoplay; encrypted-media"
               allowFullScreen
             ></iframe>
-          </div>
+          </div> */}
           
           <div className="mb-8">
             <p className="text-xl md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400 font-bold animate-pulse">

@@ -8,7 +8,7 @@ export const GuideSection: React.FC = () => {
   console.log('Order button clicked from mobile sticky button');
 
   // Open Razorpay link in a new tab
-  window.open('https://pages.razorpay.com/stores/shakti-kit', '_blank', 'noopener,noreferrer');
+  window.open('https://rzp.io/rzp/shaktikit', '_blank', 'noopener,noreferrer');
 };
 
   return (
