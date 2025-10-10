@@ -1,0 +1,19 @@
+{
+  "name": "shakti-kit-backend",
+  "version": "1.0.0",
+  "description": "Backend API for Shakti Kit - Razorpay & Shiprocket Integration",
+  "type": "module",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo 'No build needed for serverless functions'",
+    "deploy": "netlify deploy --prod"
+  },
+  "dependencies": {
+    "razorpay": "^2.9.2",
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  }
+}

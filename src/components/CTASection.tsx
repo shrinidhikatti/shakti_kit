@@ -71,20 +71,19 @@
 //   );
 // };
 
-import React, { useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { ShoppingCart, Sparkles } from 'lucide-react';
 import { AnimatedSection } from './AnimatedSection';
+import { PaymentModal } from './PaymentModal';
 import "./ProblemSection.css";
 
 export const CTASection: React.FC = () => {
-  // Reference for the iframe
-  const iframeRef = useRef<HTMLIFrameElement | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Handle Order Button click
   const handleOrderClick = () => {
     console.log('Order button clicked from CTA section');
-    // Open Razorpay link in a new tab
-    window.open('https://rzp.io/rzp/shaktikit', '_blank', 'noopener,noreferrer');
+    setIsModalOpen(true);
   };
 
   // Unmute video when section is visible
@@ -191,6 +190,9 @@ export const CTASection: React.FC = () => {
           </p>
         </div>
       </div>
+
+      {/* Payment Modal */}
+      <PaymentModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </AnimatedSection>
   );
 };

@@ -1,16 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ShoppingCart } from 'lucide-react';
+import { PaymentModal } from './PaymentModal';
 
 /* Mobile Sticky Order Button Component */
 /* Fixed at bottom center with a red-to-black gradient background */
-/* On click, redirects to Razorpay payment page */
+/* On click, opens payment modal */
 /* Includes promotional text below button on mobile, side-by-side and centered on large screens */
 
 export const MobileStickyOrder: React.FC = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const handleOrderClick = () => {
     console.log('Order button clicked from mobile sticky button');
-    // Open Razorpay link in a new tab
-    window.open('https://rzp.io/rzp/shaktikit', '_blank', 'noopener,noreferrer');
+    setIsModalOpen(true);
   };
 
   return (
@@ -65,6 +67,9 @@ export const MobileStickyOrder: React.FC = () => {
           First 50 get ₹10,000 worth breathing based meditation FREE!
         </span>
       </div>
+
+      {/* Payment Modal */}
+      <PaymentModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 };
