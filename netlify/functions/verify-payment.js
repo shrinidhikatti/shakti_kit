@@ -3,11 +3,11 @@ import crypto from 'crypto';
 import axios from 'axios';
 
 export const handler = async (event) => {
-  // CORS headers
+  // CORS headers - allow all origins for now
   const headers = {
-    'Access-Control-Allow-Origin': process.env.FRONTEND_URL || '*',
-    'Access-Control-Allow-Headers': 'Content-Type',
-    'Access-Control-Allow-Methods': 'POST, OPTIONS',
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+    'Access-Control-Allow-Methods': 'POST, OPTIONS, GET',
     'Content-Type': 'application/json'
   };
 
