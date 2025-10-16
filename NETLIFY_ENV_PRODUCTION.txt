@@ -1,0 +1,105 @@
+============================================
+   NETLIFY ENVIRONMENT VARIABLES
+   For astrovastushrivmjoshi.com/shaktikit
+============================================
+
+Add these 10 variables in Netlify Dashboard:
+https://app.netlify.com/ → Your shaktikit site
+→ Site Settings → Environment Variables
+
+---
+
+Variable 1:
+Key: RAZORPAY_KEY_ID
+Value: rzp_live_RQsJBd4fNpZt85
+
+---
+
+Variable 2:
+Key: RAZORPAY_KEY_SECRET
+Value: CB6Nd25m0pGmp89oKddMTaKg
+
+---
+
+Variable 3:
+Key: RAZORPAY_WEBHOOK_SECRET
+Value: [IMPORTANT: Create NEW webhook first, then add secret here]
+
+HOW TO GET THIS:
+1. Go to https://dashboard.razorpay.com/
+2. Settings → Webhooks → Create Webhook
+3. URL: https://shaktikit.netlify.app/.netlify/functions/payment-webhook
+4. Events: payment.authorized, payment.captured, payment.failed
+5. Copy the webhook secret and paste here
+
+---
+
+Variable 4:
+Key: SHIPROCKET_EMAIL
+Value: tp.belgaum64@gmail.com
+
+---
+
+Variable 5:
+Key: SHIPROCKET_PASSWORD
+Value: diVI2m05p5IrwWL&
+
+---
+
+Variable 6:
+Key: SHIPROCKET_API_URL
+Value: https://apiv2.shiprocket.in/v1/external
+
+---
+
+Variable 7:
+Key: FRONTEND_URL
+Value: https://astrovastushrivmjoshi.com
+
+---
+
+Variable 8:
+Key: PRODUCT_PRICE
+Value: 1999
+
+---
+
+Variable 9:
+Key: PRODUCT_NAME
+Value: Sacred Shakti Kit
+
+---
+
+Variable 10:
+Key: PRODUCT_SKU
+Value: SHAKTI-KIT-001
+
+============================================
+            AFTER ADDING VARIABLES
+============================================
+
+1. Click "Save"
+2. Go to Deploys tab
+3. Click "Trigger deploy" → "Deploy site"
+4. Wait 2-3 minutes
+
+============================================
+      RAZORPAY WEBHOOK CHECKLIST
+============================================
+
+Your Razorpay account will have TWO webhooks:
+
+Webhook 1 (Horoscopebook - existing):
+  URL: https://astrovastushrivmjoshi.com/horoscopebook/webhook
+  (or your Railway URL)
+  Secret: 7@wTd8jh6SAtcL@
+
+Webhook 2 (Shaktikit - NEW):
+  URL: https://shaktikit.netlify.app/.netlify/functions/payment-webhook
+  Secret: [NEW SECRET - get from Razorpay]
+
+⚠️  IMPORTANT:
+- Use the NEW webhook secret for RAZORPAY_WEBHOOK_SECRET
+- NOT the old horoscopebook webhook secret!
+
+============================================
