@@ -1,6 +1,6 @@
-import razorpayAPI from '../utils/razorpay.js';
+const Razorpay = require('razorpay');
 
-export const handler = async (event) => {
+const handler = async (event) => {
   // CORS headers
   const headers = {
     'Access-Control-Allow-Origin': process.env.FRONTEND_URL || '*',
@@ -38,11 +38,24 @@ export const handler = async (event) => {
       };
     }
 
+    // Initialize Razorpay
+    const razorpay = new Razorpay({
+      key_id: process.env.RAZORPAY_KEY_ID,
+      key_secret: process.env.RAZORPAY_KEY_SECRET
+    });
+
     // Generate unique receipt ID
     const receipt = `SHAKTI_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 
     // Create Razorpay order
-    const order = await razorpayAPI.createOrder(amount, 'INR', receipt);
+    const options = {
+      amount: amount * 100, // Amount in paise
+      currency: 'INR',
+      receipt: receipt,
+      payment_capture: 1
+    };
+
+    const order = await razorpay.orders.create(options);
 
     return {
       statusCode: 200,
@@ -68,3 +81,5 @@ export const handler = async (event) => {
     };
   }
 };
+
+module.exports = { handler };
