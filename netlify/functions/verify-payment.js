@@ -1,5 +1,6 @@
 import razorpayAPI from '../utils/razorpay.js';
 import shiprocketAPI from '../utils/shiprocket.js';
+import googlesheetsAPI from '../utils/googlesheets.js';
 
 export const handler = async (event) => {
   // CORS headers
@@ -76,6 +77,34 @@ export const handler = async (event) => {
         quantity: 1
       }
     });
+
+    // Log order to Google Sheets
+    try {
+      await googlesheetsAPI.logOrder({
+        orderId: razorpay_order_id,
+        paymentId: razorpay_payment_id,
+        customer: {
+          name: customerDetails.name,
+          email: customerDetails.email,
+          phone: customerDetails.phone,
+          address: customerDetails.address,
+          city: customerDetails.city,
+          state: customerDetails.state,
+          pincode: customerDetails.pincode
+        },
+        product: {
+          name: process.env.PRODUCT_NAME || 'Sacred Shakti Kit',
+          sku: process.env.PRODUCT_SKU || 'SHAKTI-KIT-001'
+        },
+        amount: paymentDetails.amount / 100,
+        shiprocketOrderId: shiprocketOrder.order_id,
+        shipmentId: shiprocketOrder.shipment_id
+      });
+      console.log('Order logged to Google Sheets successfully');
+    } catch (sheetsError) {
+      // Don't fail the entire process if sheets logging fails
+      console.error('Failed to log to Google Sheets, but continuing:', sheetsError);
+    }
 
     return {
       statusCode: 200,
