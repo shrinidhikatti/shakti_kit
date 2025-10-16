@@ -1,5 +1,4 @@
-import razorpayAPI from '../utils/razorpay.js';
-import shiprocketAPI from '../utils/shiprocket.js';
+import crypto from 'crypto';
 
 export const handler = async (event) => {
   const headers = {
@@ -19,7 +18,12 @@ export const handler = async (event) => {
     const payload = JSON.parse(event.body);
 
     // Verify webhook signature
-    const isValid = razorpayAPI.verifyWebhookSignature(payload, signature);
+    const expectedSignature = crypto
+      .createHmac('sha256', process.env.RAZORPAY_WEBHOOK_SECRET)
+      .update(JSON.stringify(payload))
+      .digest('hex');
+
+    const isValid = expectedSignature === signature;
 
     if (!isValid) {
       console.error('Invalid webhook signature');
