@@ -1,6 +1,6 @@
-const Razorpay = require('razorpay');
+import Razorpay from 'razorpay';
 
-const handler = async (event) => {
+export const handler = async (event) => {
   // CORS headers
   const headers = {
     'Access-Control-Allow-Origin': process.env.FRONTEND_URL || '*',
@@ -81,5 +81,3 @@ const handler = async (event) => {
     };
   }
 };
-
-module.exports = { handler };

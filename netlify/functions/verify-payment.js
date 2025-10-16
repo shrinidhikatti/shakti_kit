@@ -1,8 +1,8 @@
-const Razorpay = require('razorpay');
-const crypto = require('crypto');
-const axios = require('axios');
+import Razorpay from 'razorpay';
+import crypto from 'crypto';
+import axios from 'axios';
 
-const handler = async (event) => {
+export const handler = async (event) => {
   // CORS headers
   const headers = {
     'Access-Control-Allow-Origin': process.env.FRONTEND_URL || '*',
@@ -190,5 +190,3 @@ const handler = async (event) => {
     };
   }
 };
-
-module.exports = { handler };
