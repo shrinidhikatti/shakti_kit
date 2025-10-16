@@ -23,14 +23,7 @@ Value: CB6Nd25m0pGmp89oKddMTaKg
 
 Variable 3:
 Key: RAZORPAY_WEBHOOK_SECRET
-Value: [IMPORTANT: Create NEW webhook first, then add secret here]
-
-HOW TO GET THIS:
-1. Go to https://dashboard.razorpay.com/
-2. Settings → Webhooks → Create Webhook
-3. URL: https://shaktikit.netlify.app/.netlify/functions/payment-webhook
-4. Events: payment.authorized, payment.captured, payment.failed
-5. Copy the webhook secret and paste here
+Value: xhmBAD6kqXuYe@L
 
 ---
 

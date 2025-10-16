@@ -1,0 +1,126 @@
+╔══════════════════════════════════════════════════════════════╗
+║       NETLIFY ENVIRONMENT VARIABLES - READY TO USE           ║
+║       Copy-Paste to Netlify Dashboard                        ║
+╚══════════════════════════════════════════════════════════════╝
+
+🌐 Site: shaktikit.netlify.app
+📍 Go to: https://app.netlify.com/
+   → Your shaktikit site
+   → Site Settings → Environment Variables
+   → Add each variable below
+
+═══════════════════════════════════════════════════════════════
+
+Variable 1:
+Key: RAZORPAY_KEY_ID
+Value: rzp_live_RQsJBd4fNpZt85
+
+═══════════════════════════════════════════════════════════════
+
+Variable 2:
+Key: RAZORPAY_KEY_SECRET
+Value: CB6Nd25m0pGmp89oKddMTaKg
+
+═══════════════════════════════════════════════════════════════
+
+Variable 3:
+Key: RAZORPAY_WEBHOOK_SECRET
+Value: xhmBAD6kqXuYe@L
+
+✅ Webhook URL (already configured):
+   https://shaktikit.netlify.app/.netlify/functions/payment-webhook
+
+═══════════════════════════════════════════════════════════════
+
+Variable 4:
+Key: SHIPROCKET_EMAIL
+Value: tp.belgaum64@gmail.com
+
+═══════════════════════════════════════════════════════════════
+
+Variable 5:
+Key: SHIPROCKET_PASSWORD
+Value: diVI2m05p5IrwWL&
+
+═══════════════════════════════════════════════════════════════
+
+Variable 6:
+Key: SHIPROCKET_API_URL
+Value: https://apiv2.shiprocket.in/v1/external
+
+═══════════════════════════════════════════════════════════════
+
+Variable 7:
+Key: FRONTEND_URL
+Value: https://astrovastushrivmjoshi.com
+
+═══════════════════════════════════════════════════════════════
+
+Variable 8:
+Key: PRODUCT_PRICE
+Value: 1999
+
+═══════════════════════════════════════════════════════════════
+
+Variable 9:
+Key: PRODUCT_NAME
+Value: Sacred Shakti Kit
+
+═══════════════════════════════════════════════════════════════
+
+Variable 10:
+Key: PRODUCT_SKU
+Value: SHAKTI-KIT-001
+
+═══════════════════════════════════════════════════════════════
+
+📋 AFTER ADDING ALL VARIABLES:
+
+1. Click "Save"
+2. Go to "Deploys" tab
+3. Click "Trigger deploy" → "Deploy site"
+4. Wait 2-3 minutes for deployment
+5. ✅ Backend is live!
+
+═══════════════════════════════════════════════════════════════
+
+🔐 RAZORPAY WEBHOOK INFO:
+
+✅ Already created in Razorpay:
+   URL: https://shaktikit.netlify.app/.netlify/functions/payment-webhook
+   Secret: xhmBAD6kqXuYe@L
+   Events: payment.authorized, payment.captured, payment.failed
+
+═══════════════════════════════════════════════════════════════
+
+📦 SHIPROCKET INFO:
+
+✅ Account: tp.belgaum64@gmail.com
+✅ Make sure "Primary" pickup location exists
+
+═══════════════════════════════════════════════════════════════
+
+🎯 DEPLOYMENT STATUS:
+
+[ ] Backend environment variables added
+[ ] Backend deployed on Netlify
+[ ] Frontend uploaded to Hostinger
+[ ] Site tested at astrovastushrivmjoshi.com/shaktikit
+[ ] Payment flow tested
+[ ] Order verified in Razorpay & Shiprocket
+
+═══════════════════════════════════════════════════════════════
+
+🚀 READY TO DEPLOY!
+
+Your site will be live at:
+https://astrovastushrivmjoshi.com/shaktikit
+
+Backend API:
+https://shaktikit.netlify.app/.netlify/functions
+
+═══════════════════════════════════════════════════════════════
+
+⚠️  SECURITY: Keep this file private! Do not share or commit to Git.
+
+═══════════════════════════════════════════════════════════════

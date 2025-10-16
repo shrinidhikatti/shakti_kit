@@ -25,3 +25,4 @@ dist-ssr
 .env
 NETLIFY_ENV_VALUES.txt
 backend/.env
+shaktikit/
