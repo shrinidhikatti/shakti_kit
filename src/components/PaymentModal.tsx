@@ -26,7 +26,7 @@ export const PaymentModal: React.FC<PaymentModalProps> = ({ isOpen, onClose }) =
   const [error, setError] = useState('');
 
   const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:8888/.netlify/functions';
-  const PRODUCT_PRICE = 1999; // Price in rupees
+  const PRODUCT_PRICE = 3; // Price in rupees (for testing)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
