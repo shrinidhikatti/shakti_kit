@@ -68,7 +68,7 @@ export default async function handler(req, res) {
       const shiprocketOrderData = {
         order_id: razorpay_order_id,
         order_date: new Date().toISOString().split('T')[0],
-        pickup_location: 'Primary',
+        pickup_location: 'work',
         billing_customer_name: customerDetails.name,
         billing_last_name: '',
         billing_address: customerDetails.address,
