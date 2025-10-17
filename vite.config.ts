@@ -14,7 +14,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/', // Use root path for Vercel
+  base: '/shaktikit/', // Use /shaktikit/ for Hostinger subdirectory
   resolve: {
     dedupe: ['react', 'react-dom'],
   },

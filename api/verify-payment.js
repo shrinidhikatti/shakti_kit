@@ -2,30 +2,19 @@ import Razorpay from 'razorpay';
 import crypto from 'crypto';
 import axios from 'axios';
 
-export const handler = async (event) => {
-  // CORS headers - allow all origins for now
-  const headers = {
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-    'Access-Control-Allow-Methods': 'POST, OPTIONS, GET',
-    'Content-Type': 'application/json'
-  };
+export default async function handler(req, res) {
+  // CORS headers
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS, GET');
 
   // Handle preflight request
-  if (event.httpMethod === 'OPTIONS') {
-    return {
-      statusCode: 200,
-      headers,
-      body: ''
-    };
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
   }
 
-  if (event.httpMethod !== 'POST') {
-    return {
-      statusCode: 405,
-      headers,
-      body: JSON.stringify({ error: 'Method not allowed' })
-    };
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
   }
 
   try {
@@ -34,7 +23,7 @@ export const handler = async (event) => {
       razorpay_payment_id,
       razorpay_signature,
       customerDetails
-    } = JSON.parse(event.body);
+    } = req.body;
 
     // Verify payment signature
     const body = razorpay_order_id + '|' + razorpay_payment_id;
@@ -46,14 +35,10 @@ export const handler = async (event) => {
     const isValid = expectedSignature === razorpay_signature;
 
     if (!isValid) {
-      return {
-        statusCode: 400,
-        headers,
-        body: JSON.stringify({
-          success: false,
-          error: 'Invalid payment signature'
-        })
-      };
+      return res.status(400).json({
+        success: false,
+        error: 'Invalid payment signature'
+      });
     }
 
     // Initialize Razorpay to get payment details
@@ -165,28 +150,20 @@ export const handler = async (event) => {
       console.error('Failed to log to Google Sheets, but continuing:', sheetsError.message);
     }
 
-    return {
-      statusCode: 200,
-      headers,
-      body: JSON.stringify({
-        success: true,
-        message: 'Payment verified and order created',
-        paymentId: razorpay_payment_id,
-        orderId: razorpay_order_id,
-        shiprocketOrderId: shiprocketOrder.order_id || 'N/A',
-        shipmentId: shiprocketOrder.shipment_id || 'N/A'
-      })
-    };
+    return res.status(200).json({
+      success: true,
+      message: 'Payment verified and order created',
+      paymentId: razorpay_payment_id,
+      orderId: razorpay_order_id,
+      shiprocketOrderId: shiprocketOrder.order_id || 'N/A',
+      shipmentId: shiprocketOrder.shipment_id || 'N/A'
+    });
   } catch (error) {
     console.error('Error verifying payment:', error);
-    return {
-      statusCode: 500,
-      headers,
-      body: JSON.stringify({
-        success: false,
-        error: 'Failed to verify payment',
-        message: error.message
-      })
-    };
+    return res.status(500).json({
+      success: false,
+      error: 'Failed to verify payment',
+      message: error.message
+    });
   }
-};
+}
