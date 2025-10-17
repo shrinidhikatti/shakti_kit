@@ -38,7 +38,7 @@
 
 // export default App;
 
-import React from 'react';
+import React from 'react'; 
 import { Navbar } from './components/Navbar';
 import { ParticleBackground } from './components/ParticleBackground';
 import { HeroSection } from './components/HeroSection';
