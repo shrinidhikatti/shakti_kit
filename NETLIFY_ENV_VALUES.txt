@@ -1,0 +1,116 @@
+============================================
+   NETLIFY ENVIRONMENT VARIABLES
+   Copy these EXACT values to Netlify
+============================================
+
+⚠️  IMPORTANT: These are LIVE MODE credentials!
+    Real payments will be processed.
+
+Add these 10 variables in Netlify Dashboard:
+Site Settings → Environment Variables → Add Variable
+
+---
+
+Variable 1:
+Key: RAZORPAY_KEY_ID
+Value: rzp_live_RQsJBd4fNpZt85
+
+---
+
+Variable 2:
+Key: RAZORPAY_KEY_SECRET
+Value: CB6Nd25m0pGmp89oKddMTaKg
+
+---
+
+Variable 3:
+Key: RAZORPAY_WEBHOOK_SECRET
+Value: 7@wTd8jh6SAtcL@
+
+---
+
+Variable 4:
+Key: SHIPROCKET_EMAIL
+Value: tp.belgaum64@gmail.com
+
+---
+
+Variable 5:
+Key: SHIPROCKET_PASSWORD
+Value: diVI2m05p5IrwWL&
+
+---
+
+Variable 6:
+Key: SHIPROCKET_API_URL
+Value: https://apiv2.shiprocket.in/v1/external
+
+---
+
+Variable 7:
+Key: FRONTEND_URL
+Value: https://shaktikit.netlify.app
+
+---
+
+Variable 8:
+Key: PRODUCT_PRICE
+Value: 1999
+
+---
+
+Variable 9:
+Key: PRODUCT_NAME
+Value: Sacred Shakti Kit
+
+---
+
+Variable 10:
+Key: PRODUCT_SKU
+Value: SHAKTI-KIT-001
+
+============================================
+            NEXT STEPS
+============================================
+
+1. Go to: https://app.netlify.com/
+2. Select your shaktikit site
+3. Site Settings → Environment Variables
+4. Click "Add a variable" and add ALL 10 above
+5. Click "Save"
+6. Go to Deploys tab
+7. Click "Trigger deploy" → "Deploy site"
+8. Wait 2-3 minutes for deployment
+
+============================================
+      RAZORPAY WEBHOOK SETUP
+============================================
+
+After deployment:
+1. Go to: https://dashboard.razorpay.com/
+2. Settings → Webhooks
+3. Create/Edit webhook with URL:
+   https://shaktikit.netlify.app/.netlify/functions/payment-webhook
+4. Enable events:
+   ✅ payment.authorized
+   ✅ payment.captured
+   ✅ payment.failed
+
+============================================
+         SHIPROCKET SETUP
+============================================
+
+1. Go to: https://app.shiprocket.in/
+2. Login with: tp.belgaum64@gmail.com
+3. Settings → Pickup Locations
+4. Verify "Primary" pickup location exists
+   (If not, create one named exactly "Primary")
+
+============================================
+
+⚠️  SECURITY WARNING:
+    Keep this file private!
+    Do NOT commit to GitHub!
+    Delete after use!
+
+============================================
