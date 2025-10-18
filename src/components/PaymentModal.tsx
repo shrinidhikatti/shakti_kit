@@ -108,6 +108,32 @@ export const PaymentModal: React.FC<PaymentModalProps> = ({ isOpen, onClose }) =
             const verifyData = await verifyResponse.json();
 
             if (verifyData.success) {
+              // Track successful purchase with Meta Pixel
+              if (typeof window !== 'undefined' && (window as any).fbq) {
+                (window as any).fbq('track', 'Purchase', {
+                  content_name: 'Sacred Shakti Kit',
+                  content_ids: ['SHAKTI-KIT-001'],
+                  content_type: 'product',
+                  value: PRODUCT_PRICE,
+                  currency: 'INR'
+                });
+              }
+
+              // Track successful purchase with Google Analytics
+              if (typeof window !== 'undefined' && (window as any).gtag) {
+                (window as any).gtag('event', 'purchase', {
+                  transaction_id: response.razorpay_order_id,
+                  value: PRODUCT_PRICE,
+                  currency: 'INR',
+                  items: [{
+                    item_id: 'SHAKTI-KIT-001',
+                    item_name: 'Sacred Shakti Kit',
+                    price: PRODUCT_PRICE,
+                    quantity: 1
+                  }]
+                });
+              }
+
               alert('Payment successful! Your order has been placed. You will receive a confirmation email shortly.');
               onClose();
             } else {

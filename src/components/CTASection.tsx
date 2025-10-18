@@ -83,6 +83,31 @@ export const CTASection: React.FC = () => {
   // Handle Order Button click
   const handleOrderClick = () => {
     console.log('Order button clicked from CTA section');
+
+    // Track with Meta Pixel
+    if (typeof window !== 'undefined' && (window as any).fbq) {
+      (window as any).fbq('track', 'InitiateCheckout', {
+        content_name: 'Sacred Shakti Kit',
+        content_category: 'Spiritual Products',
+        value: 3,
+        currency: 'INR'
+      });
+    }
+
+    // Track with Google Analytics
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'begin_checkout', {
+        currency: 'INR',
+        value: 3,
+        items: [{
+          item_id: 'SHAKTI-KIT-001',
+          item_name: 'Sacred Shakti Kit',
+          price: 3,
+          quantity: 1
+        }]
+      });
+    }
+
     setIsModalOpen(true);
   };
 
