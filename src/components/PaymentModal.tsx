@@ -63,6 +63,29 @@ export const PaymentModal: React.FC<PaymentModalProps> = ({ isOpen, onClose }) =
     setLoading(true);
 
     try {
+      // Send lead to NeoDove CRM
+      try {
+        await fetch('https://e1398518-0664-479c-8214-266e8ccba075.neodove.com/integration/custom/e83bc1d9-9cbc-443a-ae7e-ef4e3094af26/leads', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            mobile: parseInt(formData.phone),
+            email: formData.email,
+            address: formData.address,
+            city: formData.city,
+            state: formData.state,
+            pincode: formData.pincode,
+            product: 'Sacred Shakti Kit'
+          })
+        });
+        console.log('Lead sent to NeoDove CRM');
+      } catch (crmError) {
+        console.error('Failed to send lead to CRM, but continuing with order:', crmError);
+      }
+
       // Create order on backend
       const orderResponse = await fetch(`${BACKEND_URL}/create-order`, {
         method: 'POST',
